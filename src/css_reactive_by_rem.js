@@ -1,14 +1,14 @@
 (function (root, factory) {
     if (typeof module === 'object') {
-        module.exports = factory(root)
+        module.exports = factory()
     } else if (typeof define === 'function' && define.amd) {
         define(function () {
-            return factory(root)
+            return factory()
         })
     } else {
-        root['cssReactiveByRem'] = factory(root)
+        root['cssReactiveByRem'] = factory()
     }
-})(typeof window !== 'undefined' ? window : this, function (window) {
+})(typeof window !== 'undefined' ? window : this, function () {
 
     var cssReactiveByRem = function (option) {
         if (typeof window === 'undefined') {
