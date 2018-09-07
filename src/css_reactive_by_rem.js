@@ -2,9 +2,7 @@
     if (typeof module === 'object') {
         module.exports = factory()
     } else if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return factory()
-        })
+        define([], factory)
     } else {
         root['cssReactiveByRem'] = factory()
     }
